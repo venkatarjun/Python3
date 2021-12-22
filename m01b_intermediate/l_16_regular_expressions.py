@@ -1,6 +1,6 @@
 import re
 from random import choice
-
+#RegEx can be used to check if a string contains the specified search pattern.
 re_mac_address = r"^([0-9A-Fa-f]{2}[:-]?){5}([0-9A-Fa-f]{2})$"
 re_ip_address = (
     r"^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}"

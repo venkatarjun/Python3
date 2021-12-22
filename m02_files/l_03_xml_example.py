@@ -1,4 +1,4 @@
-from l_00_inventory import xml_inventory
+from l_00_inventory import xml_inventory#this data is different
 import xmltodict
 from pprint import pprint
 

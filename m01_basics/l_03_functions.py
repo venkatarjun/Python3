@@ -3,7 +3,9 @@ import string
 from tabulate import tabulate
 
 
-def create_devices(num_devices=1, num_subnets=1):
+def create_devices(num_devices=1, num_subnets=1):#=1 is default and very
+    # useful when we call
+    #different values for the num_devuces and num _subnets
 
     # CREATE LIST OF DEVICES
     created_devices = list()
@@ -18,7 +20,6 @@ def create_devices(num_devices=1, num_subnets=1):
 
             # CREATE DEVICE DICTIONARY
             device = dict()
-
             # RANDOM DEVICE NAME
             device["name"] = (
                     choice(["r2", "r3", "r4", "r6", "r10"])
@@ -49,11 +50,11 @@ def create_devices(num_devices=1, num_subnets=1):
 
             created_devices.append(device)
 
-    return created_devices
-
+    return created_devices 
+#retuen the holding value(create_devices) to the caller (down)
 
 # --- Main program --------------------------------------------
 if __name__ == '__main__':
 
-    devices = create_devices(num_subnets=1, num_devices=15)
+    devices = create_devices(num_subnets=1, num_devices=9)#calling and storing it in devices
     print("\n", tabulate(devices, headers="keys"))

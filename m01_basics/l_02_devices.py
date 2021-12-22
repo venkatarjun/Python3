@@ -16,7 +16,7 @@ for index in range(1, 10):
     device["name"] = (
         choice(["r2", "r3", "r4", "r6", "r10"])
         + choice(["L", "U"])
-        + choice(string.ascii_letters)
+        + choice(string.ascii_letters)#abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
     )
 
     # RANDOM VENDOR FROM CHOICE OF CISCO, JUNIPER, ARISTA
@@ -33,9 +33,9 @@ for index in range(1, 10):
     device["ip"] = "10.0.0." + str(index)
 
     # NICELY FORMATTED PRINT OF THIS ONE DEVICE
-    # print()
-    # for key, value in device.items():
-    #     print(f"{key:>16s} : {value}")
+    #   print()
+    #   for key, value in device.items():
+    #      print(f"{key:>16s} : {value}")
 
     # ADD THIS DEVICE TO THE LIST OF DEVICES
     devices.append(device)

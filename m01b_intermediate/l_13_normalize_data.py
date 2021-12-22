@@ -4,7 +4,7 @@ print("\nNormalization tests\n")
 
 # ----- STRING NORMALIZATION --------------------
 
-device_1 = {
+device_1 = {                    #dict {} and : so key value pair
     "name": "sbx-n9kv-ao",
     "vendor": "cisco",
     "model": "Nexus9000 C9300v Chassis",
@@ -12,7 +12,9 @@ device_1 = {
     "version": "9.3(3)",
     "ip": "10.1.1.1",
     1: "any data goes here",
-}
+}            #here matter is same but chanege in capial letters , no's etc
+#when we tell the computer that to campare the two key valuees lets say vendor vendor and 
+# os os set it will not give truw 
 device_2 = {
     "name": "SBX-n9kv-AO",
     "vendor": "Cisco",
@@ -37,7 +39,7 @@ if (
     and device_1["vendor"].casefold() == device_2["vendor"].casefold()
     and device_1["model"].casefold() == device_2["model"].casefold()
     and device_1["os"].casefold() == device_2["os"].casefold()
-):
+):#casefold() is same as the lower() but it converts some more complex letters
     print("--String casefold() normalization works")
 else:
     print("--String casefold() normalization failed")
@@ -54,8 +56,9 @@ mac_addr_norm = "a0b1c2d3e4f5"
 
 
 # Return normalized MAC addresses
-def normalize(mac):
+def normalize(mac):  #first mac will be mac_addr_colons i,e "a0:b1:c2:d3:e4:f5"
     return mac.lower().replace(":", "").replace(".", "").replace("-", "")
+    #function chaining the above one
 
 
 if (
@@ -77,6 +80,8 @@ ip_addr_2 = "10.000.001.001"
 ip_addr_3 = "010.00.01.001"
 
 if IPv4Address(ip_addr_1) == IPv4Address(ip_addr_2) == IPv4Address(ip_addr_3):
+    #ipv4addresss is a class(builtin)
+    #camil case like India Is My etc..
     print("--IP address normalization works")
 else:
     print("--IP address normalization failed")

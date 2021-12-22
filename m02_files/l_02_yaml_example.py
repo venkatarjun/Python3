@@ -1,9 +1,11 @@
 from l_00_inventory import inventory
 import yaml
-
+#we wull use this in storing the data in databases in real world
 # CONVERT INVENTORY TO YAML AND WRITE TO FILE
 with open("l_00_inventory.yaml", "w") as yaml_out:
     yaml_out.write(yaml.dump(inventory))
+    #here we are creatimg a file l_00_inventory.yaml and writihg data to ip_to_find
+    #we can seee a file created with that name already
 
 # READ YAML INVENTORY FROM FILE
 with open("l_00_inventory.yaml", "r") as yaml_in:
@@ -18,7 +20,7 @@ print(yaml.dump(yaml.safe_load(yaml_inventory), indent=4))
 
 # COMPARE INVENTORY WE READ, WITH ORIGINAL INVENTORY, TO MAKE SURE THEY ARE EQUIVALENT
 print("\n----- compare saved inventory with original --------------------")
-saved_inventory = yaml.safe_load(yaml_inventory)
+saved_inventory = yaml.safe_load(yaml_inventory) #converting to original
 if saved_inventory == inventory:
     print("-- worked: saved inventory equals original")
 else:

@@ -1,6 +1,8 @@
 from connect import netmiko_connect
 import re
-
+#Netmiko is a module that makes it easier to use paramiko for network devices.
+# Netmiko uses paramiko but also creates interface and methods needed to work
+# with network devices. SEE SCREENSHOT FOR MORE
 SHOW_IP_ROUTE = "ip route"
 SHOW_ARP = "arp"
 SHOW_INT_DESCRIPTION = "int description"
@@ -103,7 +105,7 @@ if xr_version_raw:
 
     # re_nxos_version_pattern = r"NXOS: version (.*)"
     # re_csr_version_pattern = r"Cisco IOS XE Software, Version (.*)"
-    re_xr_version_pattern = r"Cisco IOS XR Software, Version (.*)"
+    re_xr_version_pattern = r"Cisco IOS XR Software, Version (.*)"#reg expre
 
     # nxos_version_match = re.search(re_nxos_version_pattern, nxos_version_raw)
     # csr_version_match = re.search(re_csr_version_pattern, csr_version_raw)

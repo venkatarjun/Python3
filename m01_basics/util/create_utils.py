@@ -147,4 +147,4 @@ def create_devices_gen(num_devices=1, num_subnets=1):
 
         for device_index in range(1, num_devices + 1):
             device = create_device(device_index, subnet_index)
-            yield device
+            yield device  #generator

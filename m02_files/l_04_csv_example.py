@@ -3,7 +3,8 @@ import csv
 from pprint import pprint
 from tabulate import tabulate
 import filecmp
-
+#A CSV (comma-separated values) file is a text file that has a specific format which allows
+#  data to be saved in a table structured format
 # PART I: ----- Same procedure as for JSON, YAML, XML --------------------
 
 # CONVERT INVENTORY TO CSV AND WRITE TO FILE

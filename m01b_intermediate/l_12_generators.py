@@ -1,6 +1,8 @@
 from m01_basics.util.create_utils import create_device, create_devices, create_devices_gen
 import time
-
+    #very unneccessary in real life will
+    #we will see rarely in real life
+    #yeild = stop 
 
 # --- Main program --------------------------------------------
 if __name__ == '__main__':
